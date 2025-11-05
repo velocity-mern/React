@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const h1Tag = React.createElement(
   "h1",
   { id: "title" },
