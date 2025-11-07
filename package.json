@@ -9,7 +9,7 @@
   "author": "Aniruddha",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.3.1",
+    "react": "18.3",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {

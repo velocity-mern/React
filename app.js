@@ -12,16 +12,25 @@ console.log("h1Tag", h1Tag);
 
 // JSX // traspiling the code by PARCEL => Babel
 
-//JSX(code) => React.createElement => Object =>HTML Element
+//JSX(code) => React.createElement => Object => HTML Element
+
+
+
+const TitleComponent = () => {
+  return <h1 id="title">MERN STACK DEVELOPMENT</h1>;
+};
+
+
 
 // ReactElemenet
-const h2Tag = (
+const H2Tag = (
   <div>
+    <TitleComponent />
     <h1 id="title">Hello, Welcome to React Js with JSX</h1>
   </div>
 );
 
-console.log("h2Tag", h2Tag);
+console.log("h2Tag", H2Tag);
 
 //component
 // 1. functional based component => using function => new way of creating compnent
@@ -29,21 +38,23 @@ console.log("h2Tag", h2Tag);
 
 //functional based component => it just function which return jsx
 
-const HeadingComponent = () => {
+
+const HeadingComponent = function () {
   return (
-    <h1 id="title">
-      Hello, Welcome to React Js with JSX in Functional component
-    </h1>
+    <div>
+      
+      <TitleComponent /> 
+      <TitleComponent> </TitleComponent>  
+      {TitleComponent()}
+
+      { H2Tag }
+      { console.log("hey there, I am from console") }
+      <h1 id="title">We are here to learn Mern Stack Development</h1>
+    </div>
   );
 };
-
-const HeadingComponent2 = () => (
-  <div>
-    <h1 id="title"> this is only for testing purpose</h1>
-  </div>
-);
 
 const rootElement = document.getElementById("root");
 
 const root = ReactDOM.createRoot(rootElement);
-root.render(<HeadingComponent2 />);
+root.render(<HeadingComponent />);
